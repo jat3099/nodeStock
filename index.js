@@ -17,6 +17,13 @@ app.get('/', function (req, res) {
     res.render('home', { stuff});
 });
 
+app.get('/about.html', function (req,res) { res.render('about');
+});
+
+app.get('/about.html', function (req, res) {
+    res.render('about');
+});
+
 //linking the html file with the app
 //this is the route for the static file ->file that dont change
 app.use(express.static(path.join(__dirname, 'public')));
