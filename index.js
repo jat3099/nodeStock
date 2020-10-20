@@ -1,3 +1,4 @@
+// Stock Market Portafolio App by Augusto Almeida
 const express = require('express');
 const app = express();
 const exphbs  = require('express-handlebars');
@@ -5,10 +6,12 @@ const path = require('path');
 
 const PORT = process.env.PORT || 5000;
 //set handlebars middleware
-app.engine('handlebars', exphbs());
+app.engine('handlebars', exphbs() );
 app.set('view engine', 'handlebars');
 
+//web comment
 const stuff = "Hello welcome to my stock web app";
+
 //set handlerbar routes
 app.get('/', function (req, res) {
     res.render('home', { stuff});
