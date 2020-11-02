@@ -1,2 +1,31 @@
-<h3>This is the HandleBars Webpage </h3>
-<p> {{ stuff }} </p>
+{{posted_stuff}}</br>
+<div class="jumbotron">
+  <h1 class="display-4">{{ stock.companyName }} ({{ stock.symbol }})</h1>
+  <p class="lead">
+ <strong>Date:</strong> {{stock.latestTime}}<br/>
+<strong> Percentage change: </strong> {{stock.changePercent}}<br/>
+<strong> Change:  </strong> {{stock.change}}<br/>
+<strong> 52 Highest Price: </strong> {{stock.week52High }}<br/>
+<strong> 52 Lowest Price: </strong> {{stock.week52Low }}<br/>   
+<strong> Year to day change: </strong> {{stock.ytdChange }}<br/>
+<strong> Total Volume Year Average: </strong> {{stock.avgTotalVolume}}<br/> 
+<strong> Market Cap: </strong> {{stock.marketCap}}<br/>
+<strong> Previous Price: </strong>  ${{ stock.previousClose }}<br/>
+<strong> Latest Price:  </strong>  ${{ stock.latestPrice }}<br/>
+</p>
+</div>
+
+
+
+
+<br/>
+
+
+
+
+ <!--
+ 	<br><br/>
+	{{#each stock }}
+	{{@key}} | {{this}} <br/>
+	{{/each}}
+	-->
